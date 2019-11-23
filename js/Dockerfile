@@ -1,6 +1,4 @@
-FROM node:8.15.1-alpine
-
-
+FROM node:12.13.1-alpine
 
 RUN apk add --update --no-cache \
     tzdata \
