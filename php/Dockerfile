@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
     g++ \
     wget
 
-RUN docker-php-ext-install -j$(nproc) iconv mysqli pdo_mysql mbstring intl tokenizer xml json zip exif gd
+RUN docker-php-ext-install -j$(nproc) iconv mysqli pdo_mysql mbstring intl tokenizer xml json zip exif gd bcmath
 
 RUN yes | pecl install xdebug-2.7.2 imagick \
     && docker-php-ext-enable xdebug imagick
